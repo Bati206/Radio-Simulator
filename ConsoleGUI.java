@@ -34,10 +34,10 @@ public class ConsoleGUI implements IRadioGUI {
     public int solicitarEntero(String mensaje) {
         System.out.print(mensaje + " -> ");
         while (!scanner.hasNextInt()) {
-            scanner.next(); // descarta entrada inválida, modo silencioso
+            scanner.next(); // Si no se lee un entero no continúa normalmente el programa
         }
         int numero = scanner.nextInt();
-        scanner.nextLine(); // limpia el salto de línea pendiente
+        scanner.nextLine(); 
         return numero;
     }
 }
